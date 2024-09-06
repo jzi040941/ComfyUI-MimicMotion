@@ -43,8 +43,7 @@ class MimicMotionNode:
         
         # ixaac/MimicMotion
         snapshot_download(repo_id="ixaac/MimicMotion",local_dir=ckpt_dir,
-                          allow_patterns="*1-1.pth
-.pth")
+                          allow_patterns="*1-1.pth")
         
         
     @classmethod
