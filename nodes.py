@@ -98,8 +98,7 @@ class MimicMotionNode:
         torch.set_default_dtype(torch.float16)
         infer_config = OmegaConf.load(os.path.join(now_dir,"test.yaml"))
         infer_config.base_model_path = svd_dir
-        infer_config.ckpt_path = os.path.join(ckpt_dir,"MimicMotion_1-1.pth
-.pth")
+        infer_config.ckpt_path = os.path.join(ckpt_dir,"MimicMotion_1-1.pth")
         pipeline = create_pipeline(infer_config,device)
 
         ############################################## Pre-process data ##############################################
