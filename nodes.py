@@ -43,7 +43,8 @@ class MimicMotionNode:
         
         # ixaac/MimicMotion
         snapshot_download(repo_id="ixaac/MimicMotion",local_dir=ckpt_dir,
-                          allow_patterns="*.pth")
+                          allow_patterns="*1-1.pth
+.pth")
         
         
     @classmethod
@@ -98,7 +99,8 @@ class MimicMotionNode:
         torch.set_default_dtype(torch.float16)
         infer_config = OmegaConf.load(os.path.join(now_dir,"test.yaml"))
         infer_config.base_model_path = svd_dir
-        infer_config.ckpt_path = os.path.join(ckpt_dir,"MimicMotion.pth")
+        infer_config.ckpt_path = os.path.join(ckpt_dir,"MimicMotion_1-1.pth
+.pth")
         pipeline = create_pipeline(infer_config,device)
 
         ############################################## Pre-process data ##############################################
